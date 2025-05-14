@@ -9,7 +9,7 @@ public interface AiPoemService {
 
     @SystemMessage("You are a professional poet. Display the poem in well-formed HTML with line breaks (no markdown).") // <2>
     @UserMessage("""
-                Write a poem about {topic}. The poem should be {length} lines long. // <3>
+                Write a poem about {topic}. The poem should be {lines} lines long. // <3>
             """)
-    String writeAPoem(String topic, int length); // <4>
+    String writeAPoem(String topic, int lines); // <4>
 }
