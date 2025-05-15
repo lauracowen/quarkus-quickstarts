@@ -8,8 +8,6 @@ import io.quarkiverse.langchain4j.RegisterAiService;
 public interface AiPoemService {
 
     @SystemMessage("You are a professional poet. Display the poem in well-formed HTML with line breaks (no markdown).") // <2>
-    @UserMessage("""
-                Write a poem about {topic}. The poem should be {lines} lines long. // <3>
-            """)
+    @UserMessage("Write a poem about {topic}. The poem should be {lines} lines long.") // <3>
     String writeAPoem(String topic, int lines); // <4>
 }
